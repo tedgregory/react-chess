@@ -14,7 +14,12 @@ export default function CellComponent({ cell }: PropsType) {
         [cell.bgColor === Colors.WHITE ? 'white' : 'black']: true,
       })}
     >
-      {cell.figure && <img src={cell.figure.image} alt="" />}
+      {cell.figure && (
+        <img
+          src={cell.figure.image}
+          alt={`${cell.figure.color} ${cell.figure.name}`}
+        />
+      )}
     </div>
   );
 }
