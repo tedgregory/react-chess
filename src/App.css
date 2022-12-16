@@ -19,24 +19,3 @@
   display: flex;
   flex-wrap: wrap;
 }
-
-.cell {
-  width: var(--cell-size);
-  height: var(--cell-size);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.cell img {
-  width: 80%;
-  height: 80%;
-}
-
-.black {
-  background-color: rgb(58, 54, 54);
-}
-
-.white {
-  background-color: rgb(240, 223, 223);
-}

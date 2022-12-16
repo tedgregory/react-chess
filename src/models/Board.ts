@@ -55,8 +55,8 @@ export class Board {
         row.push(
           new Cell(
             this,
-            i,
             j,
+            i,
             (i + j) % 2 === 0 ? Colors.WHITE : Colors.BLACK,
             null
           )
@@ -68,6 +68,20 @@ export class Board {
 
   getCell(x: number, y: number) {
     return this.cells[y][x];
+  }
+
+  getCopy() {
+    const newBoard = new Board();
+    newBoard.cells = this.cells;
+    return newBoard;
+  }
+
+  highLightCells(selectedCell: Cell | null) {
+    for (let row of this.cells) {
+      for (let cell of row) {
+        cell.available = !!selectedCell?.figure?.canMove(cell);
+      }
+    }
   }
 
   setFigures() {

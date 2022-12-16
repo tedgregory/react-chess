@@ -1,0 +1,8 @@
+@import '../../assets/scss/common';
+
+.board {
+  width: calc($cell-side * 8);
+  height: calc($cell-side * 8);
+  display: flex;
+  flex-wrap: wrap;
+}

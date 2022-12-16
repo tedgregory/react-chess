@@ -10,4 +10,7 @@ export default class Bishop extends Figure {
     this.image = color === Colors.WHITE ? whiteImage : blackImage;
     this.name = FigureNames.BISHOP;
   }
+  canMove(target: Cell): boolean {
+    return true;
+  }
 }
