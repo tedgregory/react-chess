@@ -18,6 +18,12 @@ export default class Queen extends Figure {
     if (this.cell.isEmptyVert(target)) {
       return true;
     }
+    if (this.cell.isEmptyHoriz(target)) {
+      return true;
+    }
+    if (this.cell.isEmptyDiag(target)) {
+      return true;
+    }
     return false;
   }
 }
