@@ -34,6 +34,9 @@ export default class Cell {
   moveFigure(target: Cell) {
     if (this.figure && this.figure.canMove(target)) {
       this.figure.moveTo(target);
+      if (target.figure) {
+        this.board.addToPrison(target.figure);
+      }
       target.setFigure(this.figure);
       this.figure = null;
     }

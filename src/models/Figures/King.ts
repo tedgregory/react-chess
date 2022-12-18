@@ -10,4 +10,15 @@ export default class King extends Figure {
     this.image = color === Colors.WHITE ? whiteImage : blackImage;
     this.name = FigureNames.KING;
   }
+  canMove(target: Cell): boolean {
+    if (!super.canMove(target)) {
+      return false;
+    }
+    const stepX = Math.abs(this.cell.x - target.x);
+    const stepY = Math.abs(this.cell.y - target.y);
+    if (stepX > 1 || stepY > 1) {
+      return false;
+    }
+    return true;
+  }
 }

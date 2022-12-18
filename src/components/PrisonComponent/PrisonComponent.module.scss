@@ -1,0 +1,21 @@
+@import '../../assets/scss/common.scss';
+
+.prison {
+  display: flex;
+  justify-content: center;
+
+  &Cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &Name {
+    text-align: center;
+  }
+}
+
+.icon {
+  width: calc($cell-side / 2);
+  height: calc($cell-side / 2);
+}
