@@ -29,7 +29,7 @@ export class FenManager {
         return 'x'.repeat(+$1);
       });
       //console.log(JSON.stringify(this.board.cells));
-      this.board.cells[7 - i].forEach((cell, j) => {
+      this.board.cells[i].forEach((cell, j) => {
         this.createFigure(parsedRow[j] as FenFigures, cell);
       });
     });
