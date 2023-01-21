@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Colors } from '../../models/Colors';
 import { Player } from '../../models/Player';
 import { dateToHMS } from '../../utils/time';
+import css from './DisplayComponent.module.scss';
 
 type PropsType = {
   player: Player | null;
@@ -45,7 +46,9 @@ export default function DisplayComponent({ player, restart }: PropsType) {
         {new Date(timeBlack * 1000).toISOString().substring(14, 19)}
       </div>
       <div>
-        <button onClick={() => reset()}>Restart game</button>
+        <button className={css.restartButton} onClick={() => reset()}>
+          Restart game
+        </button>
       </div>
     </div>
   );

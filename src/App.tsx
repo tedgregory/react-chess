@@ -1,9 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
 import BoardComponent from './components/BoardComponent/BoardComponent';
 import DisplayComponent from './components/DisplayComponent/DisplayComponent';
 import { Board } from './models/Board';
 import { Colors } from './models/Colors';
+import { FenManager } from './models/FenManager';
 import { Player } from './models/Player';
 
 function App() {
@@ -14,8 +15,10 @@ function App() {
 
   const restart = () => {
     const freshBoard = new Board();
+    const fenManager = new FenManager(freshBoard);
     freshBoard.init();
-    freshBoard.setFigures();
+    fenManager.parseFEN();
+    //freshBoard.setFigures();
     setBoard(freshBoard);
     setCurrentPlayer(whitePlayer);
   };

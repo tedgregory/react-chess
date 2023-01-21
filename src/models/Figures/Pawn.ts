@@ -1,11 +1,8 @@
 import Figure, { FigureNames } from './Figure';
-import blackImage from '../../assets/black-pawn.svg';
-import whiteImage from '../../assets/white-pawn.svg';
+import blackImage from '../../assets/img/black-pawn.svg';
+import whiteImage from '../../assets/img/white-pawn.svg';
 import { Colors } from '../Colors';
 import Cell from '../Cell';
-import { traceDeprecation } from 'process';
-import { runInThisContext } from 'vm';
-import { dir } from 'console';
 
 export default class Pawn extends Figure {
   isVirgin = true;

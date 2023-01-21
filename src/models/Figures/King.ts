@@ -1,6 +1,6 @@
 import Figure, { FigureNames } from './Figure';
-import blackImage from '../../assets/black-king.svg';
-import whiteImage from '../../assets/white-king.svg';
+import blackImage from '../../assets/img/black-king.svg';
+import whiteImage from '../../assets/img/white-king.svg';
 import { Colors } from '../Colors';
 import Cell from '../Cell';
 
@@ -10,6 +10,7 @@ export default class King extends Figure {
     this.image = color === Colors.WHITE ? whiteImage : blackImage;
     this.name = FigureNames.KING;
   }
+
   canMove(target: Cell): boolean {
     if (!super.canMove(target)) {
       return false;

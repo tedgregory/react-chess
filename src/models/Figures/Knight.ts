@@ -1,6 +1,6 @@
 import Figure, { FigureNames } from './Figure';
-import blackImage from '../../assets/black-knight.svg';
-import whiteImage from '../../assets/white-knight.svg';
+import blackImage from '../../assets/img/black-knight.svg';
+import whiteImage from '../../assets/img/white-knight.svg';
 import { Colors } from '../Colors';
 import Cell from '../Cell';
 

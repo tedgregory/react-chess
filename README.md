@@ -3,6 +3,7 @@
 Made along with UlbiTV's youtube tutorial by tedgregory
 
 Course completed and modified slightly.
+_Chess aint working correctly yet_
 
 TODO:
 

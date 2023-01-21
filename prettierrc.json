@@ -1,11 +1,12 @@
 {
-  "endOfLine": "auto",
   "semi": true,
   "singleQuote": true,
   "tabWidth": 2,
   "trailingComma": "es5",
   "printWidth": 100,
   "arrowParens": "always",
-  "htmlWhitespaceSensitivity": "css",
-  "singleAttributePerLine": true
+  "singleAttributePerLine": true,
+  "bracketSameLine": true,
+  "jsxIgnoreLineBreak": true,
+  "htmlWhitespaceSensitivity": "ignore"
 }

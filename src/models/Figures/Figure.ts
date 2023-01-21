@@ -1,5 +1,5 @@
 import { Colors } from '../Colors';
-import img from '../../assets/black-knight.svg';
+import img from '../../assets/img/black-knight.svg';
 import Cell from '../Cell';
 
 export enum FigureNames {

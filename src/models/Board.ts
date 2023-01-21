@@ -100,9 +100,9 @@ export class Board {
 
   addToPrison(figure: Figure) {
     if (figure.color === Colors.WHITE) {
-      this.whitePrison.push(figure);
-    } else {
       this.blackPrison.push(figure);
+    } else {
+      this.whitePrison.push(figure);
     }
   }
 }

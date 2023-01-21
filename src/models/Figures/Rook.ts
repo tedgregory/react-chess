@@ -1,10 +1,11 @@
 import Figure, { FigureNames } from './Figure';
-import blackImage from '../../assets/black-rook.svg';
-import whiteImage from '../../assets/white-rook.svg';
+import blackImage from '../../assets/img/black-rook.svg';
+import whiteImage from '../../assets/img/white-rook.svg';
 import { Colors } from '../Colors';
 import Cell from '../Cell';
 
 export default class Rook extends Figure {
+  isVirgin = true;
   constructor(color: Colors, cell: Cell) {
     super(color, cell);
     this.image = color === Colors.WHITE ? whiteImage : blackImage;
@@ -22,5 +23,10 @@ export default class Rook extends Figure {
       return true;
     }
     return false;
+  }
+
+  moveTo(target: Cell): void {
+    super.moveTo(target);
+    this.isVirgin = false;
   }
 }
