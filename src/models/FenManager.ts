@@ -74,7 +74,7 @@ export class FenManager {
         new Knight(Colors.BLACK, cell);
         break;
       default:
-        console.log('EMPTY CELL');
+      //console.log('EMPTY CELL');
     }
   }
   //
